@@ -13,50 +13,52 @@ body {
     padding: 60px 20px;
 }
 
-.hero p {
-    font-size: 18px;
-    margin-top: 10px;
-    color: #ccc;
+/* MDWロゴ画像 */
+.logo {
+    width: 300px;
+    display: block;
+    margin: 0 auto 20px auto;
+    filter: drop-shadow(0 0 25px rgba(120, 0, 255, 0.7))
+            drop-shadow(0 0 45px rgba(0, 200, 255, 0.5));
+    animation: logoPulse 3s ease-in-out infinite;
 }
 
-/* MDWタイトル（虹色に光る） */
+@keyframes logoPulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 25px rgba(120, 0, 255, 0.7))
+                drop-shadow(0 0 45px rgba(0, 200, 255, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 35px rgba(180, 0, 255, 1))
+                drop-shadow(0 0 65px rgba(0, 255, 255, 0.8));
+    }
+}
+
+/* MDWタイトル（青紫ネオン） */
 .title {
     font-size: 60px;
     font-weight: bold;
     margin: 0;
-    color: #ffffff !important;
-    animation: rainbowGlow 3s linear infinite;
+    color: #b8aaff;
+    text-shadow:
+        0 0 20px #00eaff,
+        0 0 40px #7f00ff,
+        0 0 60px #00eaff;
+    animation: neonGlow 3s linear infinite;
 }
 
-/* 虹色アニメーション */
-@keyframes rainbowGlow {
-    0% {
-        text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
-        color: #ff0000;
-    }
-    16% {
-        text-shadow: 0 0 20px #ff7f00, 0 0 40px #ff7f00;
-        color: #ff7f00;
-    }
-    33% {
-        text-shadow: 0 0 20px #ffff00, 0 0 40px #ffff00;
-        color: #ffff00;
+@keyframes neonGlow {
+    0%, 100% {
+        text-shadow:
+            0 0 20px #00eaff,
+            0 0 40px #7f00ff,
+            0 0 60px #00eaff;
     }
     50% {
-        text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
-        color: #00ff00;
-    }
-    66% {
-        text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
-        color: #00ffff;
-    }
-    83% {
-        text-shadow: 0 0 20px #0000ff, 0 0 40px #0000ff;
-        color: #0000ff;
-    }
-    100% {
-        text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
-        color: #ff00ff;
+        text-shadow:
+            0 0 30px #7f00ff,
+            0 0 60px #00eaff,
+            0 0 80px #7f00ff;
     }
 }
 
@@ -85,9 +87,7 @@ body {
     transition: 0.25s;
 }
 
-/* ホバー＆タップで光る */
-.member-card:hover,
-.member-card:active {
+.member-card:hover {
     box-shadow:
         0 0 20px #00eaff,
         0 0 40px #00eaff,
@@ -132,7 +132,7 @@ body {
     line-height: 1.7;
 }
 
-/* 参加フォームボタン */
+/* 参加ボタン */
 .join-button {
     display: inline-block;
     padding: 14px 28px;
