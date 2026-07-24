@@ -45,7 +45,7 @@ body {
     padding: 60px 20px;
 }
 
-/* MDWロゴ画像 */
+/* ロゴ画像 */
 .logo {
     width: 300px;
     display: block;
@@ -66,7 +66,7 @@ body {
     }
 }
 
-/* MDWタイトル（青紫ネオン） */
+/* タイトル */
 .title {
     font-size: 60px;
     font-weight: bold;
@@ -111,7 +111,7 @@ body {
 /* メンバーカード */
 .member-card {
     background: #0d0d0d;
-    border: 1px solid #1a1a1a;
+    border: 2px solid #00eaff;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 12px;
@@ -120,12 +120,12 @@ body {
 }
 
 .member-card:hover {
+    border-color: #ff00f7;
     box-shadow:
         0 0 20px #00eaff,
         0 0 40px #00eaff,
         0 0 60px #ff00f7;
     transform: translateY(-5px) scale(1.03);
-    border-color: #00eaff;
 }
 
 .icon {
@@ -164,7 +164,7 @@ body {
     line-height: 1.7;
 }
 
-/* 参加ボタン */
+/* ボタン */
 .join-button {
     display: inline-block;
     padding: 14px 28px;
@@ -173,7 +173,7 @@ body {
     border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 20px;
+    margin-right: 12px;
     transition: 0.25s;
 }
 
