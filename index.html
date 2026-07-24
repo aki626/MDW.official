@@ -19,67 +19,68 @@
     <header class="hero">
         <img class="logo" src="mdw-logo.jpeg" alt="MDWロゴ">
         <h1 class="title">MDW</h1>
-        <p>みんなでわかるWebサイト投稿の仕方！</p>
+        <p>みんな仲よく活動する</p>
     </header>
 
     <!-- メンバー一覧 -->
-   <section class="members">
-    <h2>Team Members</h2>
+    <section class="members">
+        <h2>Team Members</h2>
 
-    <div class="member-card">
-        <div class="icon">✦</div>
-        <h3>あき</h3>
-        <p>教える側</p>
-        <p>使っているソフト：Github</p>
-        <p>一言：これからよろしく！</p>
-    </div>
+        <div class="member-card">
+            <div class="icon">✦</div>
+            <h3>あき</h3>
+            <p>教える側</p>
+            <p>使っているソフト：Github</p>
+            <p>一言：これからよろしく！</p>
+        </div>
 
-    <div class="member-card">
-        <div class="icon">⚚</div>
-        <h3>二ガるメタル</h3>
-        <p>教える側</p>
-        <p>使っているソフト：Github</p>
-        <p>一言：プログラミングって実は難しくないんやで、たのしいからみんなでやろう！！</p>
-    </div>
+        <div class="member-card">
+            <div class="icon">⚚</div>
+            <h3>二ガるメタル</h3>
+            <p>教える側</p>
+            <p>使っているソフト：Github</p>
+            <p>一言：プログラミングって実は難しくないんやで、たのしいからみんなでやろう！！</p>
+        </div>
 
-    <div class="member-card">
-        <div class="icon">✡</div>
-        <h3>名前</h3>
-        <p>役割</p>
-        <p>使っているソフト</p>
-        <p>一言：</p>
-    </div>
-
-   </section>
+        <div class="member-card">
+            <div class="icon">✡</div>
+            <h3>名前</h3>
+            <p>役割</p>
+            <p>使っているソフト</p>
+            <p>一言：一言</p>
+        </div>
+    </section>
 
     <!-- About -->
     <section class="about">
         <h2>About MDW</h2>
         <p>
             MDWは「みんな仲よく」を大切にするWeb制作＆ゲーム活動チームです。<br>
-            協力、交流、創作活動など、楽しく活動しています。<br>
-            現在メンバー募集中!<br>
-            歌枠・雑談　雑談もぜんぜん○管理人が結構歌います　というオープンチャットで実施しております<br>
-            お金はもちろんかかりません<br>
-            
+            協力、交流、創作活動など、楽しく活動しています。<br><br>
         </p>
 
+        <!-- ボタン2つ横並び -->
         <a class="join-button" href="https://openchat.line.me/jp/cover/vH0ZPsfZb97koToVOlrlb_AJPMq50wdPjY1A3ZEXmghF9zzEw5ma70KI6JQ" target="_blank">
             オープンチャットに参加
+        </a>
+
+        <a class="join-button" href="https://line.me/ti/p/y3A6HrtzoN" target="_blank">
+            Lineで管理者に確認をする
         </a>
     </section>
 
     <!-- フッター -->
     <footer>
-        © 2026 MDW Team（公式）　ℳÐW　オーナー あき / ニガるメタル
+        © 2026 MDW Team　オーナー あき / ニガるメタル
     </footer>
 
-    <!-- ロード画面スクリプト（5秒で100%） -->
+    <!-- ロード画面スクリプト（9秒で100%） -->
     <script>
         let percent = 0;
         const loaderPercent = document.getElementById("loader-percent");
         const loader = document.getElementById("loader");
 
+        // 9秒 → 9000ms / 100 = 90msごとに1%進む
         const interval = setInterval(() => {
             percent++;
             loaderPercent.textContent = percent + "%";
