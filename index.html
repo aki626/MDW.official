@@ -67,7 +67,6 @@
         const loaderPercent = document.getElementById("loader-percent");
         const loader = document.getElementById("loader");
 
-        // 5秒で100% → 5000ms / 100 = 50msごとに1%進む
         const interval = setInterval(() => {
             percent++;
             loaderPercent.textContent = percent + "%";
