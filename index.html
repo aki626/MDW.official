@@ -7,6 +7,14 @@
 </head>
 <body>
 
+    <!-- ロード画面 -->
+    <div id="loader">
+        <div class="loader-box">
+            <p class="loader-text">Loading...</p>
+            <p id="loader-percent">0%</p>
+        </div>
+    </div>
+
     <!-- ヒーローヘッダー -->
     <header class="hero">
         <img class="logo" src="mdw-logo.jpeg.png" alt="MDWロゴ">
@@ -33,7 +41,6 @@
             <p>使っているソフト：Github</p>
             <p>一言：プログラミングって実は難しくないんやで、たのしいからみんなでやろう！！</p>
         </div>
-
     </section>
 
     <!-- About -->
@@ -53,6 +60,27 @@
     <footer>
         © 2026 MDW Team　オーナー あき / ニガるメタル
     </footer>
+
+    <!-- ロード画面スクリプト（5秒で100%） -->
+    <script>
+        let percent = 0;
+        const loaderPercent = document.getElementById("loader-percent");
+        const loader = document.getElementById("loader");
+
+        // 5秒で100% → 5000ms / 100 = 50msごとに1%進む
+        const interval = setInterval(() => {
+            percent++;
+            loaderPercent.textContent = percent + "%";
+
+            if (percent >= 100) {
+                clearInterval(interval);
+                loader.style.opacity = "0";
+                setTimeout(() => {
+                    loader.style.display = "none";
+                }, 500);
+            }
+        }, 50);
+    </script>
 
 </body>
 </html>
